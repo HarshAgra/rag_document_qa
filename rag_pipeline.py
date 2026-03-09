@@ -1,14 +1,11 @@
 import os
 os.environ["USE_TF"] = "0"
 
-import tempfile
-import uuid
-import streamlit as st
 import google.generativeai as genai
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
 
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
