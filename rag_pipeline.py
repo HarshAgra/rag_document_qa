@@ -1,6 +1,7 @@
 import os
 os.environ["USE_TF"] = "0"
 
+import streamlit as st
 import google.generativeai as genai
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
